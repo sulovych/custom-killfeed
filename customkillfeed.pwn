@@ -23,60 +23,60 @@ stock RandomKillMessages(killerid, playerid)
 	new KillerIDString[360];
 	new PlayerIDString[360];
 
-    new KillerName[MAX_PLAYER_NAME];
-    GetPlayerName(playerid, KillerName, MAX_PLAYER_NAME);
+	new KillerName[MAX_PLAYER_NAME];
+	GetPlayerName(playerid, KillerName, MAX_PLAYER_NAME);
 
-    new PlayerName[MAX_PLAYER_NAME];
-    GetPlayerName(playerid, PlayerName, MAX_PLAYER_NAME);
+	new PlayerName[MAX_PLAYER_NAME];
+	GetPlayerName(playerid, PlayerName, MAX_PLAYER_NAME);
 
 	switch(deathm[killerid])
 	{
-	    case 0:
+		case 0:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You sent ~r~%s ~w~to heaven",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got sent to heaven by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You sent ~r~%s ~w~to heaven",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got sent to heaven by ~r~%s",KillerName);
 		}
-        case 1:
+		case 1:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You killed ~r~%s",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got killed by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You killed ~r~%s",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got killed by ~r~%s",KillerName);
 		}
-	    case 2:
+		case 2:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You fucked ~r~%s",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got fucked by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You fucked ~r~%s",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got fucked by ~r~%s",KillerName);
 		}
-	    case 3:
+		case 3:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You reaped ~r~%s",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got reaped by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You reaped ~r~%s",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got reaped by ~r~%s",KillerName);
 		}
-	    case 4:
+		case 4:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You sent ~r~%s ~w~to cemetery",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got sent to cemetery by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You sent ~r~%s ~w~to cemetery",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got sent to cemetery by ~r~%s",KillerName);
 		}
-	    case 5:
+		case 5:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You ate ~r~%s",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got eaten by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You ate ~r~%s",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got eaten by ~r~%s",KillerName);
 		}
 		case 6:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You owned ~r~%s",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got owned by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You owned ~r~%s",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got owned by ~r~%s",KillerName);
 		}
 		case 7:
 		{
-		    format(KillerIDString, sizeof(KillerIDString), "You cooked ~r~%s",PlayerName);
-		    format(PlayerIDString, sizeof(PlayerIDString), "You got cooked by ~r~%s",KillerName);
+			format(KillerIDString, sizeof(KillerIDString), "You cooked ~r~%s",PlayerName);
+			format(PlayerIDString, sizeof(PlayerIDString), "You got cooked by ~r~%s",KillerName);
 		}
 	}
-    PlayerTextDrawSetString(killerid, DeathInfo[0][killerid], KillerIDString);
-    PlayerTextDrawShow(killerid, DeathInfo[0][killerid]);
+	PlayerTextDrawSetString(killerid, DeathInfo[0][killerid], KillerIDString);
+	PlayerTextDrawShow(killerid, DeathInfo[0][killerid]);
     
-    PlayerTextDrawSetString(playerid, DeathInfo[1][playerid], PlayerIDString);
-    PlayerTextDrawShow(playerid, DeathInfo[1][playerid]);
+	PlayerTextDrawSetString(playerid, DeathInfo[1][playerid], PlayerIDString);
+	PlayerTextDrawShow(playerid, DeathInfo[1][playerid]);
 	SetTimerEx("DeathMessage", 4000, false, "ii", killerid, playerid);
 	return 1;
 }
