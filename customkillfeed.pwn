@@ -90,7 +90,7 @@ public DeathMessage(killerid, playerid)
 
 stock InitializePTD(playerid)
 {
-    DeathInfo[0][playerid] = CreatePlayerTextDraw(playerid, 326.400146, 383.786285, "_");
+   	DeathInfo[0][playerid] = CreatePlayerTextDraw(playerid, 326.400146, 383.786285, "_");
 	PlayerTextDrawLetterSize(playerid, DeathInfo[0][playerid], 0.280000, 1.000000);
 	PlayerTextDrawAlignment(playerid, DeathInfo[0][playerid], 2);
 	PlayerTextDrawColor(playerid, DeathInfo[0][playerid], -1);
