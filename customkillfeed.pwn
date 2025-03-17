@@ -1,7 +1,5 @@
 #include <a_samp>
 
-#define MAX_PLAYER_NAME 24
-
 new deathm[MAX_PLAYERS];
 new PlayerText:DeathInfo[2][MAX_PLAYERS];
 
