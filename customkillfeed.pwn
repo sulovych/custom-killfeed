@@ -18,8 +18,8 @@ public OnPlayerDeath(playerid, killerid, reason)
 
 stock RandomKillMessages(killerid, playerid)
 {
-	new KillerIDString[360];
-	new PlayerIDString[360];
+	new KillerIDString[140];
+	new PlayerIDString[140];
 
 	new KillerName[MAX_PLAYER_NAME];
 	GetPlayerName(playerid, KillerName, MAX_PLAYER_NAME);
