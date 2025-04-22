@@ -6,7 +6,7 @@ new PlayerText:DeathInfo[2][MAX_PLAYERS];
 public OnPlayerConnect(playerid)
 {
     InitializePTD(playerid);
-    return 1l
+    return 1;
 }
 
 public OnPlayerDeath(playerid, killerid, reason)
